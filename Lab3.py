@@ -20,3 +20,21 @@ class SquareGenerator:
 # Example usage:
 generator = SquareGenerator()
 print(generator.generate_squares(1, 10))
+
+#task4
+import math
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+        return [x**2 for x in range(start, end+1)]
+
+    def calculate_square_roots(self, numbers):
+        return [math.sqrt(num) for num in numbers]
+
+# Usage
+sg = SquareGenerator()
+squares = sg.generate_squares(1, 10)
+square_roots = sg.calculate_square_roots(squares)
+
+print("Generated squares:", squares)
+print("Square roots:", square_roots)
