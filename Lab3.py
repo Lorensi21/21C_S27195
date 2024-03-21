@@ -46,3 +46,10 @@ class SquareGenerator:
             raise ValueError("End of range cannot be less than start")
         return [x**2 for x in range(start, end+1)]
 
+#task6-7
+from square_generator.square_generator import SquareGenerator
+sg = SquareGenerator()
+squares = sg.generate_squares(1, 10)
+print(squares)
+
+
