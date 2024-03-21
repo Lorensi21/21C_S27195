@@ -52,4 +52,23 @@ sg = SquareGenerator()
 squares = sg.generate_squares(1, 10)
 print(squares)
 
+#task8
+from square_generator.square_generator import SquareGenerator
+
+class CubicGenerator(SquareGenerator):
+    def generate_squares(self, start, end):
+        if end < start:
+            raise ValueError("End of range cannot be less than start")
+        return [x**3 for x in range(start, end+1)]
+
+#task9
+from square_generator.square_generator import SquareGenerator
+
+class CubicGenerator(SquareGenerator):
+    def generate_squares(self, start, end):
+        if end < start:
+            raise ValueError("End of range cannot be less than start")
+        return [x**3 if start <= end else x**2 for x in range(start, end+1)]
+
+
 
