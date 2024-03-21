@@ -70,5 +70,19 @@ class CubicGenerator(SquareGenerator):
             raise ValueError("End of range cannot be less than start")
         return [x**3 if start <= end else x**2 for x in range(start, end+1)]
 
+#task10
+from abc import ABC, abstractmethod
+class SquareGenerator(ABC):
+    @abstractmethod
+    def generate_squares(self, start, end):
+        pass
+
+from square_generator.square_generator import SquareGenerator
+class CubicGenerator(SquareGenerator):
+    def generate_squares(self, start, end):
+        if end < start:
+            raise ValueError("End of range cannot be less than start")
+        return [x**3 if start <= end else x**2 for x in range(start, end+1)]
+
 
 
